@@ -1,0 +1,23 @@
+.main {
+  max-width: 1360px;
+}
+
+.cards {
+}
+
+.cards__message {
+  margin: 0 0 34px;
+  line-height: 100%;
+}
+
+.cards__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 20px;
+  margin: 0 0 171px;
+  padding: 0;
+  max-width: 1360px;
+  list-style-type: none;
+}

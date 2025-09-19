@@ -1,0 +1,125 @@
+.modal {
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #0000004d;
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.modal__content {
+  position: relative;
+  padding: 28px 28px 36px;
+  max-width: 496px;
+  width: 100%;
+  max-height: 436px;
+  background: #fff;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  max-height: 436px;
+  box-sizing: border-box;
+}
+
+.modal__title {
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent url("../../assets/x.svg") no-repeat center;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.modal__label {
+  margin: 0 0 24px;
+}
+
+.modal__label_type_radio {
+  display: flex;
+  margin: 0;
+  color: #00000080;
+}
+
+.modal__input {
+  display: block;
+  padding: 0 0 4px;
+  max-width: 440px;
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px;
+  margin: 8px 0 0;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.modal__input::placeholder {
+  font-size: 16px;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
+  color: #00000080;
+}
+
+.modal__radio-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+  margin: 0 0 32px;
+  padding: 0;
+  border: none;
+}
+
+.modal__legend {
+  padding: 0;
+  margin: 0 0 12px;
+}
+
+.modal__radio-input {
+  margin: 0 8px 0 0;
+}
+
+.modal__label_type_radio:has(.modal__radio-input:checked) {
+  color: #000;
+}
+
+.modal__submit-btn {
+  padding: 8px 16px;
+  max-width: 124px;
+  max-height: 36px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.modal__submit-btn:hover {
+  background: #00000099;
+}
