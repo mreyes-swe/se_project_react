@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import "./App.css";
 import Header from "../Header/Header";
@@ -9,7 +8,7 @@ import { defaultClothingItems } from "../../utils/clothingItems";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
 import { getWeather } from "../../utils/weatherApi";
-import { coordinates, APIkey } from "../../utils/constants";
+import { coordinates, apiKey } from "../../utils/constants";
 import { filterWeatherData } from "../../utils/weatherApi";
 
 function App() {
@@ -36,7 +35,7 @@ function App() {
   };
 
   useEffect(() => {
-    getWeather(coordinates, APIkey)
+    getWeather(coordinates, apiKey)
       .then((data) => {
         const filteredWeatherData = filterWeatherData(data);
 
@@ -95,6 +94,7 @@ function App() {
               type="radio"
               id="hot-btn"
               name="weather-type"
+              value="hot"
             />
             Hot
           </label>
@@ -107,6 +107,7 @@ function App() {
               type="radio"
               id="warm-btn"
               name="weather-type"
+              value="warm"
             />
             Warm
           </label>
@@ -119,6 +120,7 @@ function App() {
               type="radio"
               id="cold-btn"
               name="weather-type"
+              value="cold"
             />
             Cold
           </label>
