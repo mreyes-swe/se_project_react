@@ -7,7 +7,10 @@ function useForm(defaultValues) {
     const { value, name } = evt.target;
     setValues({ ...values, [name]: value });
   };
-  return { values, handleChange, setValues };
+
+  const handleReset = () => setValues(defaultValues);
+
+  return { values, handleChange, handleReset, setValues };
 }
 
 export default useForm;

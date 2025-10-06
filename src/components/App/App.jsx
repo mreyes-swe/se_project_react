@@ -5,9 +5,8 @@ import "./App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
-import { getWeather } from "../../utils/weatherApi";
+import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import { coordinates, apiKey } from "../../utils/constants";
-import { filterWeatherData } from "../../utils/weatherApi";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import ItemModal from "../ItemModal/ItemModal";
@@ -64,7 +63,7 @@ function App() {
 
     addClothingItem(newCardData)
       .then((data) => {
-        setClothingItems([data, ...clothingItems]);
+        setClothingItems((prev) => [data, ...prev]);
         handleReset();
         handleCloseModal();
       })
@@ -93,7 +92,7 @@ function App() {
 
     getClothingItems()
       .then((data) => {
-        setClothingItems(data.reverse());
+        setClothingItems([...data].reverse());
       })
       .catch(console.error);
   }, []);
